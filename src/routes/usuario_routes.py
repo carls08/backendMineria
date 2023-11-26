@@ -8,4 +8,16 @@ usuario = Blueprint('usuario',__name__ )
 def login():
     user=request.json
     response = userController.login(user=user)
-    return jsonify(response)  
+    return jsonify(response) 
+
+@usuario.route('/insert', methods=['POST'])
+@cross_origin()
+def insertUsuario():
+    if request.method == 'POST':
+        usuario=request.json
+        if usuario:
+            response = userController.insertar_usuario(usuario=usuario)
+            return jsonify(response)
+        else:
+            return jsonify(False)
+     
