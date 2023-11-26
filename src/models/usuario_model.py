@@ -6,6 +6,7 @@ class usuarioModel:
             conexion=Connecction.getConnection()
             with conexion.cursor() as cursor:
                 try:
+                    #query para el insert de la tabla de usuarios
                     sql = "INSERT INTO usuario(documento,nombre,apellido,s_apellido,user_password,usuario,correo,telefono) VALUES(%s, %s, %s, %s, %s, %s, %s,%s)"
                     cursor.execute(sql, (int(user['documento']), user['nombre'], user['apellido'],user['s_apellido'], user['user_password'], user['usuario'], user['correo'], (int(user['telefono']))))
                     conexion.commit()

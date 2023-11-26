@@ -3,6 +3,7 @@ from controllers.usuario_controller import userController
 from flask_cors import cross_origin
 usuario = Blueprint('usuario',__name__ )
 
+##Ruta para el login
 @usuario.route('/login', methods=['POST'])
 @cross_origin()
 def login():
@@ -10,6 +11,8 @@ def login():
     response = userController.login(user=user)
     return jsonify(response) 
 
+
+#ruta para la inserccion de datos del usuario
 @usuario.route('/insert', methods=['POST'])
 @cross_origin()
 def insertUsuario():

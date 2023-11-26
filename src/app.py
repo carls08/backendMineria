@@ -12,5 +12,6 @@ app.secret_key="SECRET_KEY"
 def index():
     return jsonify({'Mensaje':'Welcome to the jungle'})
 
+#inicia el aplicativo
 if __name__ == '__main__':
     app.run(debug=True)

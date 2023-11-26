@@ -1,5 +1,5 @@
 import psycopg2
-
+#nuestra conexion a la base de datos con sus credenciales
 class Connecction:
     @staticmethod
     def getConnection():

@@ -4,6 +4,7 @@ from controllers.prediccion_controller import prediccion_controller
 
 machine_learning = Blueprint('Machine_Learning', __name__)
 
+##ruta para la inserccion de la prediccion
 @machine_learning.route('/prediction', methods=['POST'])
 @cross_origin()
 def index_prediction():
