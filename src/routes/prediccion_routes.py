@@ -8,5 +8,5 @@ machine_learning = Blueprint('Machine_Learning', __name__)
 @cross_origin()
 def index_prediction():
     response=prediccion_controller.controller_prediction_predict(request.json)
-    return jsonify({'Respuesta':int(response)})
+    return jsonify(response)
 
